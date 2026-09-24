@@ -38,6 +38,46 @@ namespace Arreglos.Logica
 
         }
 
+        // Método para ordenar (burbuja)
+
+        public void Ordenar()
+        {
+            Ordenar(true);
+        }
+
+        public void Ordenar(bool ascendente)
+        {
+            for (int i = 0; i < _tope - 1; i++)
+            {
+                for (int j = i+1; j < _tope; j++)
+                {
+                    if(ascendente)
+                    {
+                        if (_arreglo[i] > _arreglo[j])
+                        {
+                            Cambiar(ref _arreglo[i], ref _arreglo[j]);
+                        }
+                    }
+                    else
+                    {
+                        if (_arreglo[i] < _arreglo[j])
+                        {
+                            Cambiar(ref _arreglo[i], ref _arreglo[j]);
+                        }
+                    }
+                }
+            }
+        }
+
+        // Método Cambiar
+
+        public void Cambiar(ref int a, ref int b)
+        {
+            int aux = a;
+            a = b;
+            b = aux;
+        }
+
         // To String
 
         public override string ToString()
@@ -53,7 +93,9 @@ namespace Arreglos.Logica
             for (int i = 0; i < _tope; i++)
             {
                 cadena += $"{_arreglo[i]}\t";
+                
                 contador++;
+
                 if(contador > 9)
                 {
                     contador = 0;
