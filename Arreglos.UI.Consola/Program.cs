@@ -1,6 +1,6 @@
 ﻿using Arreglos.Logica;
 
-Console.WriteLine("Operaciones de pila\n");
+Console.WriteLine("Arreglo\n");
 
 MiArreglo oMiArreglo = new MiArreglo(5);
 
@@ -8,11 +8,10 @@ try
 {
     oMiArreglo.Agregar(7);
     oMiArreglo.Agregar(-2);
-    oMiArreglo.Agregar(7);
-    oMiArreglo.Agregar(-2);
-    oMiArreglo.Agregar(7);
+    Console.WriteLine(oMiArreglo);
 
-    oMiArreglo.Agregar(500);
+    Console.ReadKey();
+    oMiArreglo.Insertar(500, 20);
 }
 catch (Exception ex)
 {
