@@ -8,17 +8,24 @@ try
 {
     oMiArreglo.Agregar(7);
     oMiArreglo.Agregar(-2);
+    oMiArreglo.Agregar(8);
+
+    Console.WriteLine(oMiArreglo);
+    Console.WriteLine("\nInsertar el 500 en la posición 1\n");
+    Console.ReadKey();
+    oMiArreglo.Insertar(500, 1);
     Console.WriteLine(oMiArreglo);
 
+    Console.WriteLine("\nEliminar el 500 en la posición 1\n");
     Console.ReadKey();
-    oMiArreglo.Insertar(500, 20);
+    oMiArreglo.Eliminar(1);
+    Console.WriteLine(oMiArreglo);
 }
 catch (Exception ex)
 {
     Console.WriteLine(ex.Message);
 }
 
-Console.WriteLine(oMiArreglo);
 
 //Console.WriteLine("Arreglo\n");
 //MiArreglo oMiArreglo = new MiArreglo(100);
