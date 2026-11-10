@@ -2,29 +2,52 @@
 
 Console.WriteLine("Arreglo\n");
 
-MiArreglo oMiArreglo = new MiArreglo(5);
+MiArreglo oMyArreglo = new MiArreglo(100);
 
 try
 {
-    oMiArreglo.Agregar(7);
-    oMiArreglo.Agregar(-2);
-    oMiArreglo.Agregar(8);
-
-    Console.WriteLine(oMiArreglo);
-    Console.WriteLine("\nInsertar el 500 en la posición 1\n");
+    Console.WriteLine("\nArreglo\n");
+    oMyArreglo.Llenar();
+    Console.WriteLine(oMyArreglo);
     Console.ReadKey();
-    oMiArreglo.Insertar(500, 1);
-    Console.WriteLine(oMiArreglo);
 
-    Console.WriteLine("\nEliminar el 500 en la posición 1\n");
+    Console.WriteLine("\nPares\n");
+    var verPares = oMyArreglo.ObtenerPares();
+    Console.WriteLine(verPares);
     Console.ReadKey();
-    oMiArreglo.Eliminar(1);
-    Console.WriteLine(oMiArreglo);
+
+    Console.WriteLine("\nPares ordenados\n");
+    verPares.Ordenar(true);
+    Console.WriteLine(verPares);
+    Console.ReadKey();
 }
-catch (Exception ex)
+catch (Exception)
 {
-    Console.WriteLine(ex.Message);
+    throw;
 }
+
+
+//try
+//{
+//    oMiArreglo.Agregar(7);
+//    oMiArreglo.Agregar(-2);
+//    oMiArreglo.Agregar(8);
+
+//    Console.WriteLine(oMiArreglo);
+//    Console.WriteLine("\nInsertar el 500 en la posición 1\n");
+//    Console.ReadKey();
+//    oMiArreglo.Insertar(500, 1);
+//    Console.WriteLine(oMiArreglo);
+
+//    Console.WriteLine("\nEliminar el 500 en la posición 1\n");
+//    Console.ReadKey();
+//    oMiArreglo.Eliminar(1);
+//    Console.WriteLine(oMiArreglo);
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
 
 
 //Console.WriteLine("Arreglo\n");
